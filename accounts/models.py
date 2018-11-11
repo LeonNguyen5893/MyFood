@@ -30,8 +30,8 @@ class MyFoodUser(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=30,
                                 validators=[
                                     RegexValidator(regex=USERNAME_REGEX,
-                                                   message='Username mustbe alphanumeric or contain numbers',
-                                                   code='invalide_username')],
+                                                   message='Username must be alphanumeric or contain numbers',
+                                                   code='invalid_username')],
                                 unique=True)
     email = models.EmailField(unique=True,
                               verbose_name='email_address')
